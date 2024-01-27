@@ -68,6 +68,8 @@ def make_random_array(num_elements, min_val, max_val):
 ### Lazy Git:
 ### -----------------------------------
 def lazygit():
+	func_name = sys._getframe().f_code.co_name
+	print("**** __" + func_name + "__ ****")
 	cmds = [
 			'git add .', 
 			'git commit -m "Sync"', 
@@ -85,3 +87,13 @@ def list_modules():
 	output = sorted(output)
 	for o in output:
 		print(o)
+
+### Is Module Loaded?:
+### -----------------------------------
+def isModule_loaded():
+	module_name = "CB_Module"
+	if module_name in sys.modules:
+		print("Found ME!!!")
+		#print(module_name + " was found!")
+	else:
+		print(module_name + " was NOT found!")
