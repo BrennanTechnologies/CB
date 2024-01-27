@@ -26,10 +26,15 @@ def function_template(a,b):
 	finally:
 		print("Finally")
 
+def print_function_name(): 
+	func_name = sys._getframe().f_code.co_name
+	print("**** __" + func_name + "__ ****")
 
 ### Write Log:
 ### -----------------------------------
 def write_log(msg, cat="INFO"):
+	print_function_name()
+	
 	# Print Msg
 	print(msg)
 	

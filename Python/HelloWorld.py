@@ -1,13 +1,9 @@
-
-
-
 import sys
 import random
 import array as arr
 import CB_Module as cb
 from datetime import date
 from datetime import datetime
-
 
 # ----------------------------------------
 # MAIN:
