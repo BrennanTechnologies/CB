@@ -46,17 +46,29 @@ output = sorted(output)
 for o in output:
 	print(o)
 
-import os
-import CB_Module as cb
+# import os
+# import CB_Module as cb
 
-y = "CB_Module"
-if y in output:
-	print(y + " was found!")
+# y = "CB_Module"
+# if y in output:
+# 	print(y + " was found!")
+# else:
+# 	print(y + " was NOT found!")
+
+# cb.lazygit()
+
+
+import sys
+import CB_Module
+
+module_name = "CB_Module"
+if module_name in sys.modules:
+    print(module_name + " was found!")
 else:
-	print(y + " was NOT found!")
+    print(module_name + " was NOT found!")
 
+CB_Module.lazygit()
 
-cb.lazygit()
 
 #print('The list of imported Python modules are :',output)
 
