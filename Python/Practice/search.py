@@ -13,20 +13,20 @@ def linear_search(arr, n):
 
 # Binary Search
 def binary_search(arr, n, start=0, end=None):
-    if end is None:
-        end = len(arr) - 1
+	if end is None:
+		end = len(arr) - 1
 
-    if start > end:
-        return -1  # Element not found
+	if start > end:
+		return -1  # Element not found
 
-    mid = start + (end - start) // 2
+	mid = start + (end - start) // 2
 
-    if arr[mid] == n:
-        return mid
-    elif arr[mid] > n:
-        return binary_search(arr, n, start, mid - 1)
-    else:
-        return binary_search(arr, n, mid + 1, end)
+	if arr[mid] == n:
+		return mid
+	elif arr[mid] > n:
+		return binary_search(arr, n, start, mid - 1)
+	else:
+		return binary_search(arr, n, mid + 1, end)
 
 if __name__=="__main__": 
 	arr = []
@@ -54,5 +54,13 @@ if __name__=="__main__":
 	run_time = end_time - start_time
 	print(run_time)
 	print(lsearch)
+
+	# exponential search
+
+
+
+
+
+
 
 
