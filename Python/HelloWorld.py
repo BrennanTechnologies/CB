@@ -20,7 +20,7 @@ def main():
 	print("Hello World!")
 	cb.write_log("New Log")
 
-	#cb.lazygit() # See def end()
+	cb.lazygit() # See def end()
 
 	#####################################
 	### End: -- MAIN --
@@ -45,7 +45,8 @@ def begin():
 	pass
 
 def end():
-	cb.lazygit()
+	pass
+	#cb.lazygit()
 
 def module():
 	pass

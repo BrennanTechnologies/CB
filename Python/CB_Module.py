@@ -33,8 +33,8 @@ def print_function_name():
 ### Write Log:
 ### -----------------------------------
 def write_log(msg, cat="INFO"):
-	print_function_name()
-	
+	print("**** __" + str(sys._getframe().f_code.co_name) + "__ ****")
+
 	# Print Msg
 	print(msg)
 	
@@ -73,8 +73,10 @@ def make_random_array(num_elements, min_val, max_val):
 ### Lazy Git:
 ### -----------------------------------
 def lazygit():
-	func_name = sys._getframe().f_code.co_name
-	print("**** __" + func_name + "__ ****")
+	print("**** __" + str(sys._getframe().f_code.co_name) + "__ ****")
+	# func_name = sys._getframe().f_code.co_name
+	# print("**** __" + func_name + "__ ****")
+
 	cmds = [
 			'git add .', 
 			'git commit -m "Sync"', 
