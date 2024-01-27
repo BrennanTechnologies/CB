@@ -72,6 +72,33 @@ def make_random_array(num_elements, min_val, max_val):
 		a.append(random.randint(min_val,max_val))
 	return a
 
+### Linear search
+### -----------------------------------
+def linear_search(arr, n):
+	found = False
+	for i in range(len(arr)):
+		if arr[i] == n:
+			found = True
+	return i
+
+### Binary Search
+### -----------------------------------
+def binary_search(arr, n, start=0, end=None):
+	if end is None:
+		end = len(arr) - 1
+
+	if start > end:
+		return -1  # Element not found
+
+	mid = start + (end - start) // 2
+
+	if arr[mid] == n:
+		return mid
+	elif arr[mid] > n:
+		return binary_search(arr, n, start, mid - 1)
+	else:
+		return binary_search(arr, n, mid + 1, end)
+	
 ### Lazy Git:
 ### -----------------------------------
 def lazygit():
