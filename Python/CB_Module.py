@@ -76,7 +76,7 @@ def lazygit():
 			'git push'
 			]
 	for cmd in cmds:
-		print("EXECUTING: ==>" + cmd)
+		print("EXECUTING: ***** ==> " + cmd)
 		#os.system(cmd)
 		output = os.system(cmd)
 		#print(output)
