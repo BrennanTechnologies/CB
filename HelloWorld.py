@@ -19,19 +19,10 @@ import os
 # os.system('git commit -m "sync"')
 # os.system('git push')
 
-# cmd_str = 'git add .'
-# os.system(cmd_str)
-# cmd_str = 'git commit -m "sync"'
-# os.system(cmd_str)
-# cmd_str = 'git push'
-# os.system(cmd_str)
-
 cmds = ['git add .', 'git commit -m "Sync"', 'git push']
 for cmd in cmds:
 	print(cmd)
-os.system(cmd)
-
-
+	os.system(cmd)
 
 # def lazygit():
 #     # git add .
