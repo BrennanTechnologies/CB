@@ -63,7 +63,8 @@ import CB_Module
 
 module_name = "CB_Module"
 if module_name in sys.modules:
-    print(module_name + " was found!")
+    print()
+	#print(module_name + " was found!")
 else:
     print(module_name + " was NOT found!")
 
