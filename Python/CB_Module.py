@@ -78,6 +78,8 @@ def lazygit():
 	for cmd in cmds:
 		print(cmd)
 		os.system(cmd)
+		#output = os.system(cmd)
+		#print(output)
 
 ### List Modules:
 ### -----------------------------------
