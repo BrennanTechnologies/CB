@@ -78,7 +78,7 @@ def lazygit():
 	for cmd in cmds:
 		print("\t***** EXECUTING: ***** ==> " + cmd)
 		#os.system(cmd)
-		output = os.system(cmd)
+		output = os.system(cmd + " > null")
 		#print(output)
 
 ### List Modules:
