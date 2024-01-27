@@ -73,7 +73,7 @@ def module():
 if __name__=="__main__": 
 	begin()
 	main() 
-	end()
+	end(cb.lazygit())
 # Run on Import
 if __name__!="__main__": 
 	module()
