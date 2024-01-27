@@ -76,3 +76,12 @@ def lazygit():
 	for cmd in cmds:
 		print(cmd)
 		os.system(cmd)
+
+### List Modules:
+### -----------------------------------
+def list_modules():
+	import sys
+	output = [module.__name__ for module in sys.modules.values() if module]
+	output = sorted(output)
+	for o in output:
+		print(o)
