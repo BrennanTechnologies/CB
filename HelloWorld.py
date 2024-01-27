@@ -19,7 +19,11 @@ import os
 # os.system('git commit -m "sync"')
 # os.system('git push')
 
-cmds = ['git add .', 'git commit -m "Sync"', 'git push']
+cmds = [
+		'git add .', 
+		'git commit -m "Sync"', 
+		'git push'
+		]
 for cmd in cmds:
 	print(cmd)
 	os.system(cmd)
