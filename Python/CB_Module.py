@@ -78,16 +78,17 @@ def lazygit():
 	print("\n\t EXECUTING: ==> \t ***** " + str(sys._getframe().f_code.co_name) + " *****")
 
 	cmds = [
-			'git add .', 
-			'git commit -m "Sync"', 
-			'git push'
+				'git add .', 
+				'git commit -m "Sync"', 
+				'git push'
 			]
 	for cmd in cmds:
 		print("\t***** EXECUTING: ***** ==> " + cmd)
-		#os.system(cmd)
-		os.system(cmd + " > null")
+		os.system(cmd)
+		#os.system(cmd + " > null")
 		#output = os.system(cmd + " 2> null")
 		#print(output)
+#g = lazygit()
 
 ### List Modules:
 ### -----------------------------------
