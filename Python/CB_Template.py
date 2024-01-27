@@ -12,7 +12,7 @@ from datetime import datetime
 def main(): 
 	print(" *** __main__ ***") 
 	func_name = sys._getframe().f_code.co_name
-	print("**** __" + func_name + "__ ****")
+	print("\n\t EXECUTING: ==> \t ***** " + func_name + " *****")
 
 	#####################################
 	### Start: -- MAIN --

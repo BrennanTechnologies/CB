@@ -28,12 +28,14 @@ def function_template(a,b):
 
 def print_function_name(): 
 	func_name = sys._getframe().f_code.co_name
-	print("**** __" + func_name + "__ ****")
+	print("\n\t EXECUTING: ==> \t ***** " + func_name + " *****")
+	
+	print("\n\t EXECUTING: ==> \t ***** " + str(sys._getframe().f_code.co_name) + " *****")
 
 ### Write Log:
 ### -----------------------------------
 def write_log(msg, cat="INFO"):
-	print("**** __" + str(sys._getframe().f_code.co_name) + "__ ****")
+	print("\n\t EXECUTING: ==> \t ***** " + str(sys._getframe().f_code.co_name) + " *****")
 
 	# Print Msg
 	print(msg)
@@ -73,9 +75,7 @@ def make_random_array(num_elements, min_val, max_val):
 ### Lazy Git:
 ### -----------------------------------
 def lazygit():
-	print("**** __" + str(sys._getframe().f_code.co_name) + "__ ****")
-	# func_name = sys._getframe().f_code.co_name
-	# print("**** __" + func_name + "__ ****")
+	print("\n\t EXECUTING: ==> \t ***** " + str(sys._getframe().f_code.co_name) + " *****")
 
 	cmds = [
 			'git add .', 
@@ -107,3 +107,37 @@ def isModule_loaded():
 		#print(module_name + " was found!")
 	else:
 		print(module_name + " was NOT found!")
+
+def print_format_table():
+    """
+    prints table of formatted text format options
+    """
+    for style in range(8):
+        for fg in range(30,38):
+            s1 = ''
+            for bg in range(40,48):
+                format = ';'.join([str(style), str(fg), str(bg)])
+                s1 += '\x1b[%sm %s \x1b[0m' % (format, format)
+            print(s1)
+        print('\n')
+
+def show_colors():
+	class bcolors:
+		HEADER = '\033[95m'
+		OKBLUE = '\033[94m'
+		OKCYAN = '\033[96m'
+		OKGREEN = '\033[92m'
+		WARNING = '\033[93m'
+		FAIL = '\033[91m'
+		ENDC = '\033[0m'
+		BOLD = '\033[1m'
+		UNDERLINE = '\033[4m'
+
+	print(bcolors.HEADER + "HEADER: " + bcolors.ENDC)
+	print(bcolors.OKBLUE + "OKBLUE: " + bcolors.ENDC)
+	print(bcolors.OKCYAN + "OKCYAN: " + bcolors.ENDC)
+	print(bcolors.WARNING + "WARNING: " + bcolors.ENDC)
+	print(bcolors.FAIL + "FAIL: " + bcolors.ENDC)
+	print(bcolors.ENDC + "ENDC: " + bcolors.ENDC)
+	print(bcolors.BOLD + "BOLD: " + bcolors.ENDC)
+	print(bcolors.UNDERLINE + "UNDERLINE: " + bcolors.ENDC)
