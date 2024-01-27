@@ -55,7 +55,7 @@ def read_file(file_name):
 	print(file.read())
 	file.close()
 
-# Create random array
+### Create random array
 ### -----------------------------------
 def make_random_array(num_elements, min_val, max_val):
 	#a = arr.array("i")
@@ -63,3 +63,15 @@ def make_random_array(num_elements, min_val, max_val):
 	for i in range(0,num_elements):
 		a.append(random.randint(min_val,max_val))
 	return a
+
+### Lazy Git:
+### -----------------------------------
+def lazygit():
+	cmds = [
+			'git add .', 
+			'git commit -m "Sync"', 
+			'git push'
+			]
+	for cmd in cmds:
+		print(cmd)
+		os.system(cmd)
