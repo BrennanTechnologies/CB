@@ -14,6 +14,10 @@ def main():
 	func_name = sys._getframe().f_code.co_name
 	print("**** __" + func_name + "__ ****")
 
+	#####################################
+	### Start: MAIN
+	#####################################
+
 	cb.write_log("Hello World!")
 	cb.write_log("An error ocurred!", "ERROR")
 	
@@ -22,6 +26,9 @@ def main():
 
 	cb.read_file("logfile.log")
 
+	#####################################
+	### End: MAIN
+	#####################################
 
 	try:
 		print("Try")
