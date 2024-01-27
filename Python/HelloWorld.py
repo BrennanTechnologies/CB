@@ -36,7 +36,7 @@ def main():
 
 	cb.write_log("New Log")
 
-	cb.lazygit()
+	#cb.lazygit()
 
 	#####################################
 	### End: MAIN
@@ -61,7 +61,7 @@ def begin():
 	pass
 
 def end():
-	pass
+	cb.lazygit()
 
 def module():
 	pass
@@ -73,7 +73,7 @@ def module():
 if __name__=="__main__": 
 	begin()
 	main() 
-	end(cb.lazygit())
+	end()
 # Run on Import
 if __name__!="__main__": 
 	module()
