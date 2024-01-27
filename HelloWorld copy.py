@@ -14,7 +14,10 @@ cmd_str = "git add ."
 #subprocess.run([cmd_str]) 
 
 import os
+#os.system('git add .')
 os.system('git add .')
+os.system('git commit -m "sync"')
+os.system('git push')
 
 # def lazygit():
 #     # git add .
