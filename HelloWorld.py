@@ -8,16 +8,26 @@ print("Hello World!")
 
 
 
+# sub process
 import subprocess
-cmd_str = "git add ."
 #subprocess.run(["ls", "-l"]) 
 #subprocess.run([cmd_str]) 
 
+# os
 import os
-#os.system('git add .')
-os.system('git add .')
-os.system('git commit -m "sync"')
-os.system('git push')
+# os.system('git add .')
+# os.system('git commit -m "sync"')
+# os.system('git push')
+
+cmd_str = 'git add .'
+os.system(cmd_str)
+
+cmd_str = 'git commit -m "sync"'
+os.system(cmd_str)
+
+cmd_str = 'git push'
+os.system(cmd_str)
+
 
 # def lazygit():
 #     # git add .
