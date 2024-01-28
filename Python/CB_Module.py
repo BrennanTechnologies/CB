@@ -67,12 +67,22 @@ def read_file(file_name):
 ### -----------------------------------
 def make_random_array(num_elements, min_val, max_val):
 	#a = arr.array("i")
-	a = []
+	arr = []
 	for i in range(0,num_elements):
-		a.append(random.randint(min_val,max_val))
-	return a
+		arr.append(random.randint(min_val,max_val))
+	return arr
 
-### Linear search
+def make_simple_array1():
+	arr = [random.randint(0,9) for i in range(0,9)]
+	return arr
+
+def make_simple_array2():
+	lst = []
+	for i in range(0,9):
+		lst.append(random.randint(0,9))
+
+
+### Linear Search:
 ### -----------------------------------
 def linear_search(arr, n):
 	found = False
@@ -81,7 +91,7 @@ def linear_search(arr, n):
 			found = True
 	return i
 
-### Binary Search
+### Binary Search:
 ### -----------------------------------
 def binary_search(arr, n, start=0, end=None):
 	if end is None:

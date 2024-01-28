@@ -30,7 +30,7 @@ def binary_search(arr, n, start=0, end=None):
 
 if __name__=="__main__": 
 	arr = []
-	size = 10000000
+	size = 100
 	for i in range(0,size):
 		arr.append(random.randint(0,9))
 	#arr = [ 2, 3, 4, 10, 40 ]
